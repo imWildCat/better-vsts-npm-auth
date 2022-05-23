@@ -23,6 +23,9 @@ export function getVstsLabOauthToken(): string {
 }
 
 export function isVstsFeedUrl(url: string): boolean {
+  if (!url) {
+    return false;
+  }
   if (!(url.indexOf("/_packaging/") > -1)) {
     return false;
   }
